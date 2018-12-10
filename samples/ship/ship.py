@@ -315,6 +315,10 @@ if __name__ == '__main__':
                         help='Video to apply the color splash effect on')
     args = parser.parse_args()
 
+
+    args.dataset = "../../datasets/ship/"
+    args.command = "train"
+
     # Validate arguments
     if args.command == "train":
         assert args.dataset, "Argument --dataset is required for training"
