@@ -63,7 +63,7 @@ class ShipConfig(Config):
 
     # We use a GPU with 12GB memory, which can fit two images.
     # Adjust down if you use a smaller GPU.
-    IMAGES_PER_GPU = 1
+    IMAGES_PER_GPU = 2
 
     BACKBONE = 'resnet50'
 
@@ -74,17 +74,10 @@ class ShipConfig(Config):
     # Number of training steps per epoch
     STEPS_PER_EPOCH = 150
 
+    RPN_NMS_THRESHOLD = 0.95
+
     # Skip detections with < 90% confidence
     DETECTION_MIN_CONFIDENCE = 0.95
-
-    ## balance out losses
-    LOSS_WEIGHTS = {
-        "rpn_class_loss": 30.0,
-        "rpn_bbox_loss": 0.8,
-        "mrcnn_class_loss": 6.0,
-        "mrcnn_bbox_loss": 1.0,
-        "mrcnn_mask_loss": 1.2
-    }
     
 
 
