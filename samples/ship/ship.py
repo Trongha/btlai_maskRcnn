@@ -105,6 +105,7 @@ class ShipDataset(utils.Dataset):
         # Train or validation dataset?
         assert subset in ["train", "val"]
         dataset_dir = os.path.join(dataset_dir, subset)
+        # dataset_dir = "../../datasets/ship/train/"
 
         # Load annotations
         # VGG Image Annotator (up to version 1.6) saves each image in the form:
@@ -314,6 +315,9 @@ if __name__ == '__main__':
                         metavar="path or URL to video",
                         help='Video to apply the color splash effect on')
     args = parser.parse_args()
+
+    args.command = "train"
+    args.dataset = "../../datasets/ship/"
 
     # Validate arguments
     if args.command == "train":
