@@ -316,14 +316,10 @@ if __name__ == '__main__':
                         help='Video to apply the color splash effect on')
     args = parser.parse_args()
 
-<<<<<<< HEAD
-    args.command = "train"
-    args.dataset = "../../datasets/ship/"
-=======
 
-    args.dataset = "../../datasets/ship/"
     args.command = "train"
->>>>>>> 01009184b07222f528284a8cf5d5b612ee7bb24c
+    args.dataset = "../../datasets/ship/"
+
 
     # Validate arguments
     if args.command == "train":
